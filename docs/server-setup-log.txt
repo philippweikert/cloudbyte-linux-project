@@ -1,0 +1,11 @@
+Setup log:
+Server created 28.09.26 by Philipp Weikert
+
+Groups, Users, Permisions:
+
+engineering	alice, bob, carol, dave		770 /shared/engineering & 775 /shared/company-docs
+marketing	emma, frank, grace		770 /shared/marketing & 775 /shared/company-docs
+operations	henry, iris, jack, kate, leo	770 /shared/operations & 775 /shared/company-docs
+admins		kate, leo			775 /logs/reports & 775 /shared/company-docs 
+
+No Problems occured while setting this up.
