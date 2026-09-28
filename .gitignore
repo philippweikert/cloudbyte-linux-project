@@ -11,6 +11,9 @@ Desktop.ini
 .vscode/
 .idea/
 
+# Vagrant
+.vagrant/
+
 # Secrets and keys, never commit these
 *.pem
 *.key
