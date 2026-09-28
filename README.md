@@ -36,5 +36,4 @@ Built the core of the server: four groups (`engineering`, `marketing`,
 `verify-foundations.sh` checks the groups, users, directories and setup
 log in one go. Run it on the VM with:
 
-    repo is mounted at /vagrant so run inside the VM:
     bash /vagrant/verify-foundations.sh
