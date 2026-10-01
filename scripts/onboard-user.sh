@@ -22,6 +22,7 @@ TEMP_PASSWORD="ChangeMe123!"
 
 # --- Argument parsing ----------------------------------------------------
 DRY_RUN=false
+LOG_RUN=false
 CSV_FILE=""
 
 while [ $# -gt 0 ]; do
@@ -33,6 +34,10 @@ while [ $# -gt 0 ]; do
         --dry-run)
             DRY_RUN=true
             shift
+            ;;
+        --log)
+            LOG_RUN=true
+            shift 
             ;;
         -h|--help)
             grep '^# Usage:' "$0" | sed 's/^# //'
@@ -71,6 +76,10 @@ create_user() {
     echo "$username:$TEMP_PASSWORD" | chpasswd
     usermod -aG "$group" "$username"
     chage -d 0 "$username"
+
+    if [ "$LOG_RUN" = true ]; then
+       echo "$(date '+%Y-%m-%d %H:%M:%S') created $username $group" >> /var/log/cloudbyte-onboarding.log
+    fi 
 
     echo "Created $username in group $group with temp password (must change on first login)."
 }
