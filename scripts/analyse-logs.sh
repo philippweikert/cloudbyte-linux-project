@@ -1,4 +1,8 @@
 #!/bin/bash/
+# analyse-logs.sh: CloudByte Solutions analyses the logs
+# Author: Philipp Weikert
+# Created: 2026-10-07
+# Purpose: Analyses the logs under /logs and filters for CRITICAL errors
 # Usage: sudo bash analyse-logs.sh
 
 set -eo pipefail
