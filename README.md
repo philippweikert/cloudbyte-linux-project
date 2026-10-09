@@ -1,3 +1,35 @@
+# CloudByte Solutions, Linux Server Project
+
+A multi-user Linux server for a 12-person startup, built from scratch on Amazon
+Linux 2023 and deployed to AWS EC2. Users and groups, permission-controlled shared
+storage, and a set of bash tools that automate onboarding, backups, log analysis,
+and system-health reporting.
+
+## Skills demonstrated
+
+- User and group administration; permission models and least-privilege design
+- Bash automation: onboarding, backups, log generation and analysis, health reporting
+- Scheduling with cron; reading and parsing log files
+- Deploying and operating a remote server over SSH on AWS EC2
+
+## Structure layout of the Server
+
+data  README.md  test.txt     verify-backup.sh  verify-foundations.sh  verify-logs.sh        verify-permissions.sh
+docs  scripts    Vagrantfile  verify-ec2.sh     verify-health.sh       verify-onboarding.sh
+
+./data:
+cloudbyte-users.csv  new-hires.csv
+
+./docs:
+aliases  differences-log.txt  permissions-test-report.md  server-handbook.md  server-setup-log.txt
+
+./docs/aliases:
+zz-cloudbyte-aliases.sh
+
+./scripts:
+analyse-logs.sh  backup-shared.sh  cleanup-backups.sh  deploy-to-ec2.sh  log-generator.sh  onboard-user.sh  restore-backup.sh  system-health.sh
+
+
 # CloudByte Solutions: Linux SysAdmin Project
 
 A Linux system administration project, built first on a local VM
