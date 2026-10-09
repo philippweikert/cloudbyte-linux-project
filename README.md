@@ -14,6 +14,7 @@ and system-health reporting.
 
 ## Structure layout of the Server
 
+```
 data  README.md  test.txt     verify-backup.sh  verify-foundations.sh  verify-logs.sh        verify-permissions.sh
 docs  scripts    Vagrantfile  verify-ec2.sh     verify-health.sh       verify-onboarding.sh
 
@@ -28,7 +29,7 @@ zz-cloudbyte-aliases.sh
 
 ./scripts:
 analyse-logs.sh  backup-shared.sh  cleanup-backups.sh  deploy-to-ec2.sh  log-generator.sh  onboard-user.sh  restore-backup.sh  system-health.sh
-
+```
 
 # CloudByte Solutions: Linux SysAdmin Project
 
